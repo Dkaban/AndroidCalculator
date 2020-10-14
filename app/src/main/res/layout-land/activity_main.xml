@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="2"
+    android:layout_gravity="end"
+    android:gravity="end"
+    android:background="#92DEC5">
+
+    <fragment
+        android:id="@+id/fragment_entry"
+        android:name="com.example.calculator.FragmentEntry"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout="@layout/fragment_entry"
+        android:layout_weight="0.4"
+        />
+
+    <fragment
+        android:id="@+id/fragment_calculation"
+        android:name="com.example.calculator.Calculation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout="@layout/fragment_calculation"
+        android:layout_weight="0.1"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        />
+
+    <fragment
+        android:id="@+id/fragment_buttons"
+        android:name="com.example.calculator.FragmentButtons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout="@layout/fragment_buttons"
+        android:layout_weight="1.5"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+</LinearLayout>
