@@ -15,4 +15,4 @@ It is a basic calculator.
 - Delete
 - Clear
 
-![alt text](https://github.com/Dkaban/AndroidCalculator/blob/master/Calculator_Screenshot.jpg?raw=true)
+![alt text](https://github.com/Dkaban/AndroidCalculator/blob/master/Calculator_Screenshot_Small.jpg?raw=true)
