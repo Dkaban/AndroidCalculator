@@ -179,9 +179,9 @@ public class MainActivity extends AppCompatActivity implements FragmentButtons.N
             {
                 double parsed = Double.parseDouble(parsedDouble);
 
-                if(negative) parsed *= -1.0f;
+                if(negative) parsed *= -1.0;
 
-                if (operator == "")
+                if (operator.equals(""))
                 {
                     aggregate = parsed;
                 }
