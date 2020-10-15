@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements FragmentButtons.N
             char c = s.charAt(i);
 
             //If the Char is a number or it's the decimal operator, we just combine it with the number essentially
-            if (Character.isDigit(c) || c == '.')
+            if (Character.isDigit(c) || c.equals('.'))
             {
                 parsedDouble += c;
             }
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements FragmentButtons.N
             }
 
             //We need to verify that we're looking at an operator, or else we want to skip it
-            if ((!Character.isDigit(c) || i == s.length()-1) && c != '.' && c != '(' && parsedDouble != "")
+            if ((!Character.isDigit(c) || i == s.length()-1) && !c.equals('.') && !c.equals('(') && !parsedDouble.equals(""))
             {
                 double parsed = Double.parseDouble(parsedDouble);
 
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements FragmentButtons.N
         if(currentEntry.length() > 0)
         {
             //This does a check to see if there is a negative, if so, we want to delete the ( and the -
-            if(currentEntry.charAt(currentEntry.length()-1) == '(')
+            if(currentEntry.charAt(currentEntry.length()-1).equals('('))
             {
                 currentEntry = currentEntry.substring(0,currentEntry.length()-2);
             }
@@ -249,6 +249,7 @@ public class MainActivity extends AppCompatActivity implements FragmentButtons.N
         fragmentCalculation.updateText(Double.toString(result));
     }
 
+    //TODO: Clean up this function (there has to be a way to clear easier)
     private void clearEntry()
     {
         //We want to reset all the values back to empty strings or 0
